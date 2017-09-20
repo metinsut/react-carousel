@@ -1,0 +1,76 @@
+.banner-root {
+  margin: 0 auto;
+  width: 40%;
+}
+.banner-root .banner-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.banner-root .banner-block .banner-item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.banner-root .banner-block .banner-item .img-block img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+.banner-root .banner-block .banner-item .title-block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-root .banner-block .banner-item .title-block:hover {
+  background-color: darkorange;
+}
+.banner-root .banner-block .banner-item .title-block h1 {
+  align-self: flex-start;
+  color: rgba(26, 188, 156, 0.7);
+  font-size: 4vw;
+}
+.banner-root .banner-block .arr-root {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+.banner-root .banner-block .arr-root span {
+  color: #c0392b;
+}
+.banner-root .banner-block .arr-root .arr-block-left {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.banner-root .banner-block .arr-root .arr-block-left:hover {
+  background-color: rgba(189, 195, 199, 0.4);
+}
+.banner-root .banner-block .arr-root .arr-block-right {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.banner-root .banner-block .arr-root .arr-block-right:hover {
+  background-color: rgba(189, 195, 199, 0.4);
+}
+.banner-root .banner-block .nav-block {
+  position: absolute;
+  width: 30%;
+  height: 570px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.banner-root .banner-block .nav-block .nav-item {
+  font-size: 30px;
+  cursor: pointer;
+}
