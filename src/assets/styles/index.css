@@ -16,6 +16,12 @@
   align-items: center;
   width: 100%;
 }
+
+.banner-root .banner-block .fade {
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
 .banner-root .banner-block .banner-item .img-block img {
   width: 100%;
   height: 600px;
@@ -27,6 +33,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+
 .banner-root .banner-block .banner-item .title-block:hover {
   background-color: darkorange;
 }
@@ -35,6 +43,12 @@
   color: rgba(26, 188, 156, 0.7);
   font-size: 4vw;
 }
+
+.banner-root .banner-block .transform {
+  animation-name: transform;
+  animation-duration: 5s;
+}
+
 .banner-root .banner-block .arr-root {
   position: absolute;
   display: flex;
@@ -73,4 +87,22 @@
 .banner-root .banner-block .nav-block .nav-item {
   font-size: 30px;
   cursor: pointer;
+}
+
+@keyframes fade {
+  0% {opacity: 0}
+  3% {opacity: 0.1}
+  10% {opacity: 1}
+  /* 30%{opacity: 1} */
+  90%{opacity: 1}
+  97%{opacity: 0.1}
+  100%{opacity: 0}
+}
+
+@keyframes transform {
+  0% {transform: translateY(-200px) }
+  20% {transform: translateY(0)}
+  30%{transform: scale(1)}
+  40%{transform: scale(1.5)}
+  50%{transform: scale(1)}
 }

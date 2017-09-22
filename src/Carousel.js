@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
 
 class Carousel extends Component {
   constructor(props) {
@@ -35,6 +34,18 @@ class Carousel extends Component {
   };
 
   slideIndex = 0;
+  interval;
+
+  componentDidMount() {
+    this.setBannerInterval();
+  }
+
+  setBannerInterval = () => {
+    this.interval = setInterval(() => {
+      this.slideIndex = (this.slideIndex + 1) % this.state.banner.length;
+      this.forceUpdate();
+    }, 5000)
+  }
 
   slide = (n) => {
     this.slideIndex = this.slideIndex === 0 && n < 0 ? this.state.banner.length - 1 : (this.slideIndex + n) % this.state.banner.length;
@@ -46,6 +57,8 @@ class Carousel extends Component {
     this.forceUpdate();
   }
 
+
+
   render() {
     return (
       this.state.banner &&
@@ -53,12 +66,12 @@ class Carousel extends Component {
         <div className="banner-block">
           {this.state.banner.map((item, key) => (
             this.slideIndex === key &&
-            <div className="banner-item" key={key}>
+            <div className="banner-item fade" key={key}>
               <div className="img-block">
                 <img src={item.img} alt="" />
               </div>
-              <div className="title-block">
-                <h1>{item.title}t</h1>
+              <div className="title-block transform">
+                <h1>{item.title}</h1>
               </div>
             </div>
           ))
